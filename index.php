@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PixelPlayground</title>
     <style>
-        /* --- CSS: Dark Theme --- */
         body {
             margin: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -111,23 +110,7 @@
     </style>
 </head>
 <body>
-
-    <header>
-        <a href="index.php" class="logo">🎮 PixelPlayground</a>
-        <nav>
-            <div class="nav-links">
-                <a href="index.php">Home</a>
-                <a href="games.php">Games</a>
-                <a href="highscores.php">Highscores</a>
-                <a href="profile.php">Profiel</a>
-            </div>
-            
-            <div class="auth-buttons">
-                <a href="login.php" class="btn-auth btn-login">Inloggen</a>
-                <a href="register.php" class="btn-auth btn-register">Registreren</a>
-            </div>
-        </nav>
-    </header>
+    <?php include 'header.php'; ?>
 
     <main>
         <section class="hero">
