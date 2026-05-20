@@ -1,0 +1,66 @@
+/*LEADERBOARD */
+.leaderboard-container {
+    max-width: 600px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+
+.game-list {
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+    list-style: none; 
+    flex-wrap: wrap;
+}
+
+.game-btn {
+    padding: 10px 15px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+.game-btn:hover {
+    background-color: #ddd;
+}
+
+.game-btn.active {
+    background-color: #007BFF;
+    color: white;
+    border-color: #0056b3;
+}
+
+.highscore-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.highscore-table th, .highscore-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+.highscore-table th {
+    background-color: #333;
+    color: white;
+}
+
+.highscore-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.highscore-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.rank {
+    font-weight: bold;
+    width: 15%;
+}
