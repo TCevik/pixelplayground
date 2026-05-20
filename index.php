@@ -1,3 +1,7 @@
+<?php
+require_once 'config.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="nl">
 <head>
@@ -77,6 +81,30 @@
                     <p>Geen downloads of installaties nodig. Maak simpelweg een account aan en speel direct!</p>
                 </div>
             </div>
+            </div>
+        </section>
+
+        <section class="pp-hero-section" style="max-width: 600px; margin: 4rem auto; padding: 2rem;">
+            <h2>Top 5 Highscores Overall</h2>
+            <table style="width: 100%; text-align: left; border-collapse: collapse; margin-top: 20px;">
+                <tr style="border-bottom: 2px solid var(--accent-color);">
+                    <th style="padding: 10px;">Game</th>
+                    <th style="padding: 10px;">Speler</th>
+                    <th style="padding: 10px;">Score</th>
+                </tr>
+                <?php
+                $top_stmt = $conn->prepare("SELECT game_name, username, score FROM highscores ORDER BY score DESC LIMIT 5");
+                $top_stmt->execute();
+                $top_res = $top_stmt->get_result();
+                while ($ts = $top_res->fetch_assoc()):
+                ?>
+                <tr style="border-bottom: 1px solid var(--text-color);">
+                    <td style="padding: 10px;"><?php echo htmlspecialchars($ts['game_name']); ?></td>
+                    <td style="padding: 10px;"><?php echo htmlspecialchars($ts['username']); ?></td>
+                    <td style="padding: 10px;"><?php echo (int)$ts['score']; ?></td>
+                </tr>
+                <?php endwhile; ?>
+            </table>
         </section>
     </main>
 
