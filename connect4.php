@@ -30,9 +30,12 @@ session_start();
                 <div class="c4-cell" data-index="<?php echo $i; ?>"></div>
             <?php endfor; ?>
         </div>
+        <div class="controls" style="margin-bottom: 1rem; align-items: center;">
+            <label style="cursor: pointer;"><input type="radio" name="gameMode" value="1" checked onchange="changeMode()"> 1 Speler (vs AI)</label>
+            <label style="cursor: pointer;"><input type="radio" name="gameMode" value="2" onchange="changeMode()"> 2 Spelers</label>
+        </div>
         <div class="controls">
             <button class="pp-btn-cta" onclick="resetGame()" style="background: var(--btn-secondary); margin:0;">Opnieuw</button>
-            <button class="pp-btn-cta" onclick="giveUp()" style="background: red; margin:0;">Give Up</button>
         </div>
     </main>
     <script src="lib/connect4.js"></script>
