@@ -23,9 +23,13 @@ session_start();
         <p>Bekijk de beste scores per game!</p>
 
         <nav class="game-switcher">
-            <ul class="game-list" style="list-style:none; display:flex; gap:10px; padding:0; justify-content:center;">
-                <li><button class="game-btn active pp-btn-cta" onclick="switchGame('TicTacToe', event)">TicTacToe</button></li>
-                <li><button class="game-btn pp-btn-cta" onclick="switchGame('Connect4', event)">Vier op een rij</button></li>
+            <ul class="game-list" style="list-style:none; display:flex; flex-wrap:wrap; gap:10px; padding:0; justify-content:center;">
+                <li><button class="game-btn active pp-btn-cta" onclick="switchGame('TicTacToe', event)" style="margin-top:0;">TicTacToe</button></li>
+                <li><button class="game-btn pp-btn-cta" onclick="switchGame('Connect4', event)" style="margin-top:0;">Vier op een rij</button></li>
+                <li><button class="game-btn pp-btn-cta" onclick="switchGame('Galgje', event)" style="margin-top:0;">Galgje</button></li>
+                <li><button class="game-btn pp-btn-cta" onclick="switchGame('Wordle', event)" style="margin-top:0;">Wordle</button></li>
+                <li><button class="game-btn pp-btn-cta" onclick="switchGame('Flappybird', event)" style="margin-top:0;">Flappybird</button></li>
+                <li><button class="game-btn pp-btn-cta" onclick="switchGame('PacMan', event)" style="margin-top:0;">Pac Man</button></li>
             </ul>
         </nav>
 

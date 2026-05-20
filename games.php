@@ -31,6 +31,26 @@ session_start();
                 <h2>Vier op een rij</h2>
                 <p>Verbind vier stukken van dezelfde kleur.</p>
             </a>
+            <a href="hangman.php" class="game-card">
+                <div class="game-icon">🪢</div>
+                <h2>Galgje</h2>
+                <p>Raad het woord voordat je hangt.</p>
+            </a>
+            <a href="wordle.php" class="game-card">
+                <div class="game-icon">🟩🟨⬜</div>
+                <h2>Wordle</h2>
+                <p>Raad het 5-letter woord in 6 beurten.</p>
+            </a>
+            <a href="flappybird.php" class="game-card">
+                <div class="game-icon">🐦</div>
+                <h2>Flappybird</h2>
+                <p>Ontwijk de buizen en scoor punten.</p>
+            </a>
+            <a href="pacman.php" class="game-card">
+                <div class="game-icon">🟡👻</div>
+                <h2>Pac Man</h2>
+                <p>Eet de bolletjes, ontwijk de spoken.</p>
+            </a>
         </div>
     </main>
 </body>

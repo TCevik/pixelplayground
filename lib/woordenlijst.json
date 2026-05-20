@@ -1,0 +1,10 @@
+[
+    {"word": "PIXEL", "hint": "Het kleinste puntje op een scherm."},
+    {"word": "PLAYGROUND", "hint": "Een speelplaats (in het Engels)."},
+    {"word": "JAVASCRIPT", "hint": "De programmeertaal van het web."},
+    {"word": "DATABASE", "hint": "Hierin sla je gestructureerde data op."},
+    {"word": "FRONTEND", "hint": "Het zichtbare deel van een website."},
+    {"word": "BACKEND", "hint": "De logica en server van een website."},
+    {"word": "COMPUTER", "hint": "Een elektronisch apparaat dat gegevens verwerkt."},
+    {"word": "PROGRAMMEREN", "hint": "Het schrijven van code."}
+]
