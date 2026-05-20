@@ -1,0 +1,295 @@
+/* Globale Stijlen */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+main {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+/* Header Stijlen */
+#pp-main-header {
+    background-color: #16213e;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ff4757;
+}
+
+#pp-header-logo-img {
+    max-width: 50px; 
+    height: auto;
+    border-radius: 15px;
+    width: 20%;
+}
+
+.pp-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff4757;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#pp-main-nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.pp-nav-links {
+    display: flex;
+    gap: 15px;
+}
+
+.pp-nav-links a {
+    text-decoration: none;
+    color: #e0e0e0;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.pp-nav-links a:hover {
+    color: #ff4757;
+}
+
+.pp-auth-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.pp-btn-auth {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.pp-btn-login {
+    background-color: #ff4757;
+    color: white;
+}
+
+.pp-btn-login:hover {
+    background-color: #ff6b81;
+}
+
+.pp-btn-register {
+    background-color: #0f3460;
+    color: white;
+    border: 1px solid #0f3460;
+}
+
+.pp-btn-register:hover {
+    background-color: #16213e;
+    border-color: #ff4757;
+}
+
+/* Index Pagina Stijlen */
+.pp-hero-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    background: linear-gradient(-45deg, #0f3460, #ff4757, #e94560, #16213e);
+    background-size: 400% 400%;
+    animation: pp-gradient-bg 15s ease infinite;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+@keyframes pp-gradient-bg {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.pp-hero-section h1 {
+    margin-top: 0;
+    font-size: 2.5rem;
+    color: white;
+}
+
+.pp-hero-section p {
+    font-size: 1.2rem;
+    color: #f0f0f0;
+}
+
+/* Slideshow Stijlen */
+.pp-games-slideshow-section {
+    margin: 4rem auto;
+    max-width: 800px;
+    text-align: center;
+}
+
+.pp-games-slideshow-section h2 {
+    color: #ff4757;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pp-slideshow-container {
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    background-color: #0f3460;
+}
+
+.pp-slide {
+    display: none;
+}
+
+.pp-slide img {
+    vertical-align: middle;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.pp-slide-text {
+    color: #f2f2f2;
+    font-size: 24px;
+    padding: 15px 12px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(0,0,0,0.7);
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+.pp-prev, .pp-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.pp-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.pp-prev {
+    left: 0;
+}
+
+.pp-prev:hover, .pp-next:hover {
+    background-color: #ff4757;
+}
+
+.pp-dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #717171;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.pp-dot.pp-active, .pp-dot:hover {
+    background-color: #ff4757;
+}
+
+.pp-fade {
+    animation-name: pp-fade-anim;
+    animation-duration: 1.5s;
+}
+
+@keyframes pp-fade-anim {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+.pp-btn-cta {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 12px 30px;
+    background-color: #ff4757;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.4);
+}
+
+.pp-btn-cta:hover {
+    transform: translateY(-3px);
+    background-color: #ff6b81;
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
+}
+
+/* Features sectie */
+.pp-features-section {
+    margin: 4rem auto;
+    max-width: 1000px;
+}
+
+.pp-features-section h2 {
+    color: #ff4757;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+}
+
+.pp-features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.pp-feature-card {
+    background-color: #16213e;
+    padding: 2rem;
+    border-radius: 15px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: transform 0.3s;
+    border-top: 4px solid #ff4757;
+}
+
+.pp-feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.pp-feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.pp-feature-card h3 {
+    color: #e0e0e0;
+    margin-bottom: 1rem;
+}
+
+.pp-feature-card p {
+    color: #a0a0a0;
+    line-height: 1.5;
+}
