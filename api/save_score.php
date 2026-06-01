@@ -13,13 +13,13 @@ if (!$data) {
 
 $game_name = $data['game_name'] ?? '';
 $score = (int)($data['score'] ?? 0);
-$username = 'anoniem';
-$user_id = null;
-
-if (isset($_SESSION['user_id'])) {
-    $username = $_SESSION['username'];
-    $user_id = $_SESSION['user_id'];
+if (!isset($_SESSION['user_id'])) {
+    echo json_encode(['success' => false, 'error' => 'Niet ingelogd']);
+    exit();
 }
+
+$username = $_SESSION['username'];
+$user_id = $_SESSION['user_id'];
 
 if (empty($game_name)) {
     echo json_encode(['success' => false, 'error' => 'Geen game opgegeven']);
