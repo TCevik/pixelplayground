@@ -270,6 +270,59 @@ main {
     box-shadow: 0 6px 20px rgba(255, 71, 87, 0.6);
 }
 
+.leaderboard-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.game-switcher {
+    margin-bottom: 1.5rem;
+}
+
+.game-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 0;
+    justify-content: center;
+    margin: 0;
+}
+
+.game-list li {
+    margin: 0;
+}
+
+.game-btn {
+    margin-top: 0;
+}
+
+.highscore-table {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    border-collapse: collapse;
+}
+
+.highscore-table th,
+.highscore-table td {
+    padding: 10px;
+    border-bottom: 1px solid var(--text-color);
+}
+
+.highscore-table th {
+    text-align: left;
+}
+
+#current-game-title {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 /* Features sectie */
 .pp-features-section {
     margin: 4rem auto;
